@@ -1,4 +1,8 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .secao { 
     padding: 80px 40px; 
@@ -50,10 +54,7 @@
     flex-wrap: wrap;
     gap: 80px;
 }
-/* div texto */
-#info-projetos-futuros{
-    max-width: 40%;
-}
+
 /* div gif */
 #background-projetos-futuros {
   background-size: cover;
@@ -112,4 +113,40 @@
     background-color: var(--azul-principal-hover);
     transform: scale(1.1);
 }
+
+.secao-projetos {
+    min-height: 700px; 
+    width: 100%;
+    
+    
+}
+/* Projetos (fotos do Notez)*/
+.fotos-projeto {
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; 
+    padding: 2rem 5%;
+}
+
+.info-fotos-projeto {
+    padding-top: 100px;
+    justify-content: center;
+    align-items: center;
+     /* background-color: red; */
+    width: min(500px, 100%); 
+    flex: 1 1 500px; 
+    max-width: 1000px;
+}
+
+.info-fotos-projeto h2 {
+    font-size: clamp(2rem, 5vw, 62px);
+    margin: 0 0 1rem 0;
+}
+
+.info-fotos-projeto p {
+    font-size: clamp(1rem, 2vw, 24px);
+}
+
+
 
