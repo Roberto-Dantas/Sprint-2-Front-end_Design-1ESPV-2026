@@ -1,5 +1,7 @@
 :root {
     --cor-fonte: rgb(219, 219, 219);
+    --azul-principal: #4169E1;
+    --azul-principal-hover: #5274db;
 }
 
 * { 
@@ -45,11 +47,11 @@ header {
 }
 
 .menuNav ul li a:hover {
-    color: #4169E1;
+    color: var(--azul-principal);
 }
 
 .menuNav ul li a.ativo {
-    color: #4169E1;
+    color: var(--azul-principal);
 }
 
 .logo { 
@@ -79,9 +81,63 @@ header {
 
 
 footer { 
-    background: #4169E1; 
+    background: var(--azul-principal); 
     color: #fff; 
     padding: 40px; 
     text-align: center; 
     font-size: 13px; 
+}
+
+.projetos-futuros-home {
+    /* border: 1px solid var(--azul-principal); */
+    min-height: 80vh; 
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding-left: 5%; 
+    padding-right: 5%; 
+    padding-top: 2rem; 
+    padding-bottom: 2rem;
+    gap: 20p
+}
+
+.projetos-futuros-home span {
+    color: var(--azul-principal);
+    font-weight: bold;
+}
+
+
+.projetos-futuros-home h1 {
+    color: #ffffff; 
+    font-size: 56px; 
+    font-weight: 800; 
+    line-height: 1.15; 
+    letter-spacing: -1px; 
+    margin-bottom: 20px;
+}
+
+.projetos-futuros-home div {
+    width: 50%;
+}
+
+.projetos-futuros-home p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #999898;
+}
+
+.projetos-futuros-home button{
+    background-color: var(--azul-principal);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--cor-fonte);
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+.projetos-futuros-home button:hover{
+    background-color: var(--azul-principal-hover);
+    transform: scale(1.1);
 }
