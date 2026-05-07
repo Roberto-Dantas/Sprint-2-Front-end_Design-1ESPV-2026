@@ -34,3 +34,82 @@
     color: #aaa; font-size: 14px; border-radius: 8px;
     margin-top: 32px;
 }
+
+/* div geral */
+.projetos-futuros-home {
+    /* border: 1px solid var(--azul-principal); */
+    /* max-width: 100px;  */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+/* div texto */
+#info-projetos-futuros{
+    max-width: 40%;
+}
+/* div gif */
+#background-projetos-futuros {
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 40%;
+   min-width: 400px;
+  overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* gif */
+#background-projetos-futuros img{
+    width: 400px;
+    height: auto;
+    border-radius: 60px;
+}
+
+.projetos-futuros-home span {
+    color: var(--azul-principal);
+    font-weight: bold;
+}
+
+
+.projetos-futuros-home h1 {
+    color: #ffffff; 
+    font-size: 56px; 
+    font-weight: 800; 
+    line-height: 1.15; 
+    letter-spacing: -1px; 
+    margin-bottom: 20px;
+}
+
+.projetos-futuros-home div {
+    width: 50%;
+}
+
+.projetos-futuros-home p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #999898;
+}
+
+.projetos-futuros-home button{
+    background-color: var(--azul-principal);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--cor-fonte);
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+.projetos-futuros-home button:hover{
+    background-color: var(--azul-principal-hover);
+    transform: scale(1.1);
+}
+
