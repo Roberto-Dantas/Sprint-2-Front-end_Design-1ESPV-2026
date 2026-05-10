@@ -44,6 +44,10 @@ img {
     max-width: 100%;
 }
 
+.icon{
+   color: #5274db; 
+}
+
 
 .container {
     width: 100%;
@@ -134,6 +138,34 @@ footer {
     background: var(--azul-principal);
     color: var(--branco);
     font-size: 13px;
+}
+
+/* 
+======================
+@keyframes - animações
+======================
+*/
+
+/* Roberto, conseguiria adicionar algo para a animação acontecer toda vez que o usuário ver o título de apresentação dos projetos, na página principal? No JS. */
+.fade{
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* @MEDIA (RESPONSIVIDADE) */
