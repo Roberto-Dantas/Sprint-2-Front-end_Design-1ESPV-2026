@@ -1,0 +1,39 @@
+const barra = document.getElementById("progresso");
+
+window.addEventListener("scroll", () => {
+    // localização do scroll
+    const scrollTop = window.scrollY;
+    // altura total da página - altura da janela
+    const alturaPagina =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+    // divisão do quanto foi rolado pela altura total da página
+    const porcentagem = (scrollTop / alturaPagina) * 100;
+
+    // aplicando na barra
+    barra.style.width = porcentagem + "%";
+});
+
+
+// Função com Intersection Observer
+const observer = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add("fade");
+        } else {
+            // remove quando não aparecer para o user
+            entrada.target.classList.remove("fade");
+        }
+    });
+}, {
+    // ativa quando 10% aparecer
+    threshold: 0.1
+});
+
+// Seleciona todos os elementos com o .animar
+const elementosAnimados = document.querySelectorAll(".animar");
+
+// Adiciona o observador em cada elementp
+elementosAnimados.forEach((elemento) => {
+    observer.observe(elemento);
+});
