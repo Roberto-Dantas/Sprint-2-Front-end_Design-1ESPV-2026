@@ -7,6 +7,7 @@
     <title>NoteZ | Sobre Nós</title>
     <link rel="stylesheet" href="./../css/style.css">
     <link rel="stylesheet" href="./../css/detalhes.css">
+    <link rel="stylesheet" href="./../css/slideshow.css">
     <script src="https://kit.fontawesome.com/9a6d6b106b.js" crossorigin="anonymous"></script>
 </head>
 
@@ -23,29 +24,34 @@
                     <li><a href="#" class="menuNav-item ativo">Detalhes</a></li>
                     <li><a href="./contato.html" class="menuNav-item">Contato</a></li>
                 </ul>
-                <a href="./inscricao.html" class="menuNav-item" style="margin-right: 20px;">Inscrição</a>
+                <a href="./inscricao.html" class="menuNav-item" style="margin-right: 20px;">Beta Testers</a>
             </nav>
         </div>
     </header>
 
+   
     <section class="conteudo-detalhado">
-
-        <!--  DIAGRAMA DO CORDEIRO  -->
-        <div class="diagrama-section">
-            <div class="texto-bloco">
-                <span class="tagline">Modelagem</span>
-                <h2>Diagrama de Casos de Uso</h2>
-                <p>O diagrama abaixo detalha as interações entre os usuários e as funcionalidades principais do sistema, garantindo um fluxo de experiência otimizado.</p>
-            </div>
-            <div class="img-placeholder">
-                
+            <!--  DIAGRAMA DO CORDEIRO  -->
+            <div class="diagrama-section">
+                <div class="texto-bloco">
+                    <span class="tagline">Modelagem</span>
+                    <h2>Diagrama de Casos de Uso</h2>
+                    <p>O diagrama abaixo detalha as interações entre os usuários e as funcionalidades principais do sistema, garantindo um fluxo de experiência otimizado.</p>
+                </div>
                 <div class="decor-box">DIAGRAMA DO CORDEIRO, COLOCAR AQUI DEPOIS</div>
+
+                 <div class="slideshow">
+                    <img id="slide-img" src="./images/slide1.jpg" alt="slide">
+                    <button id="btn-anterior">&#8592;</button>
+                    <button id="btn-proximo">&#8594;</button>
+                    <div id="pontos"></div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    
 
-
+    <script src="./../js/slideshow.js"></script>           
     <footer>
         <div class="container">
             <p class="footer-text">

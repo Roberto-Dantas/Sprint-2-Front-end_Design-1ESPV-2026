@@ -1,3 +1,4 @@
+//#region Barra de progresso | Home
 const barra = document.getElementById("progresso");
 
 window.addEventListener("scroll", () => {
@@ -13,8 +14,9 @@ window.addEventListener("scroll", () => {
     // aplicando na barra
     barra.style.width = porcentagem + "%";
 });
+//#endregion
 
-
+//#region Validador de tela de usuario | Home
 // Função com Intersection Observer
 const observer = new IntersectionObserver((entradas) => {
     entradas.forEach((entrada) => {
@@ -29,7 +31,6 @@ const observer = new IntersectionObserver((entradas) => {
     // ativa quando 10% aparecer
     threshold: 0.1
 });
-
 // Seleciona todos os elementos com o .animar
 const elementosAnimados = document.querySelectorAll(".animar");
 
@@ -37,3 +38,7 @@ const elementosAnimados = document.querySelectorAll(".animar");
 elementosAnimados.forEach((elemento) => {
     observer.observe(elemento);
 });
+//#endregion
+
+
+//#                                                                                                                                          

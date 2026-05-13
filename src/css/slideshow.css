@@ -1,0 +1,43 @@
+.slideshow {
+  position: relative;
+  text-align: center;
+}
+
+.slideshow img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.slideshow button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #1a1a2e;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#btn-anterior { left: 10px; }
+#btn-proximo  { right: 10px; }
+
+#pontos {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+#pontos span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #aaa;
+  cursor: pointer;
+  display: inline-block;
+}
