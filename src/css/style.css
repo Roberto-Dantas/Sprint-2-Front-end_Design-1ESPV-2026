@@ -188,9 +188,10 @@ footer {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
+    background: #e8ff47b5;
+    color: #000;
     padding: 8px 12px;
     border-radius: 6px;
     font-size: 14px;
+    z-index: 999;
 }
