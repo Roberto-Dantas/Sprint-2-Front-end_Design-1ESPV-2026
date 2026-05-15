@@ -1,60 +1,102 @@
-var imagens = [
-  './../img/slide1.jpg',
-  './../img/slide2.jpg',
-  './../img/slide3.jpg',];
+function criarSlideshow(config) {
+    var imagens = config.imagens;
+    var atual = 0;
 
-var atual = 0;
-var img = document.getElementById('slide-img');
-var pontos = document.getElementById('pontos');
+    var img = document.getElementById(config.imgId);
+    var pontos = document.getElementById(config.pontosId);
 
-// gera os pontos
-for (var i = 0; i < imagens.length; i++) {
-  var ponto = document.createElement('span');
-  ponto.setAttribute('data-index', i);
-  pontos.appendChild(ponto);
+    if (!img || !pontos) return;
 
-  ponto.addEventListener('click', function() {
-    atual = parseInt(this.getAttribute('data-index'));
+    // cria os pontos
+    for (let i = 0; i < imagens.length; i++) {
+        var ponto = document.createElement('span');
+
+        ponto.setAttribute('data-index', i);
+        pontos.appendChild(ponto);
+
+        ponto.addEventListener('click', function () {
+            atual = parseInt(this.getAttribute('data-index'));
+            trocarSlide();
+        });
+    }
+
+    function trocarSlide() {
+        img.src = imagens[atual];
+
+        var todos = pontos.querySelectorAll('span');
+
+        todos.forEach(p => {
+            p.style.background = '#aaa';
+        });
+
+        todos[atual].style.background = '#e8ff47';
+    }
+
+    document.getElementById(config.btnAnterior)
+        ?.addEventListener('click', function () {
+
+        atual = atual === 0
+            ? imagens.length - 1
+            : atual - 1;
+
+        trocarSlide();
+    });
+
+    document.getElementById(config.btnProximo)
+        ?.addEventListener('click', function () {
+
+        atual = atual === imagens.length - 1
+            ? 0
+            : atual + 1;
+
+        trocarSlide();
+    });
+
+    setInterval(() => {
+        atual = atual === imagens.length - 1
+            ? 0
+            : atual + 1;
+
+        trocarSlide();
+    }, 4000);
+
     trocarSlide();
-  });
 }
 
-function trocarSlide() {
-  img.src = imagens[atual];
 
-  var todos = pontos.querySelectorAll('span');
-  for (var i = 0; i < todos.length; i++) {
-    todos[i].style.background = '#aaa';
-  }
-  todos[atual].style.background = '#1a1a2e';
-}
+// Pitch
+criarSlideshow({
+    imagens: [
+        './../img/Pitch_Atom/slide1.jpg',
+        './../img/Pitch_Atom/slide2.jpg',
+        './../img/Pitch_Atom/slide3.jpg',
+        './../img/Pitch_Atom/slide4.jpg',
+        './../img/Pitch_Atom/slide5.jpg',
+        './../img/Pitch_Atom/slide6.jpg',
+        './../img/Pitch_Atom/slide7.jpg',
+        './../img/Pitch_Atom/slide8.jpg',
+        './../img/Pitch_Atom/slide9.jpg',
+        './../img/Pitch_Atom/slide10.jpg'
+    ],
 
-document.getElementById('btn-anterior').addEventListener('click', function() {
-  if (atual == 0) {
-    atual = imagens.length - 1;
-  } else {
-    atual--;
-  }
-  trocarSlide();
+    imgId: 'slide-pitch',
+    pontosId: 'pontos-pitch',
+    btnAnterior: 'btn-anterior-pitch',
+    btnProximo: 'btn-proximo-pitch'
 });
 
-document.getElementById('btn-proximo').addEventListener('click', function() {
-  if (atual == imagens.length - 1) {
-    atual = 0;
-  } else {
-    atual++;
-  }
-  trocarSlide();
+
+// Screenshots
+criarSlideshow({
+    imagens: [
+        './../img/notez-conteudos.png',
+        './../img/notez-biblioteca.png',
+        './../img/notez-hub.png',
+        './../img/notez-camera.png'
+    ],
+
+    imgId: 'slide-screenshots',
+    pontosId: 'pontos-screenshots',
+    btnAnterior: 'btn-anterior-screenshots',
+    btnProximo: 'btn-proximo-screenshots'
 });
-
-// troca sozinho a cada 3 segundos
-setInterval(function() {
-  if (atual == imagens.length - 1) {
-    atual = 0;
-  } else {
-    atual++;
-  }
-  trocarSlide();
-}, 3000);
-
-trocarSlide();

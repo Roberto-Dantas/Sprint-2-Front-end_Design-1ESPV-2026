@@ -1,6 +1,8 @@
-var email = document.querySelectorAll('.input-inscricao')[0];
-var senha = document.querySelectorAll('.input-inscricao')[1];
-var confirma = document.querySelectorAll('.input-inscricao')[2];
+
+var nome = document.querySelectorAll('.input-inscricao')[0];
+var email = document.querySelectorAll('.input-inscricao')[1];
+var senha = document.querySelectorAll('.input-inscricao')[2];
+var confirma = document.querySelectorAll('.input-inscricao')[3];
 var btn = document.querySelector('.btn-inscricao');
 var olhoSenha = document.getElementById('olho-senha');
 var olhoConfirma = document.getElementById('olho-confirma');
@@ -38,6 +40,14 @@ btn.addEventListener('click', function() {
   email.style.borderColor = '';
   senha.style.borderColor = '';
   confirma.style.borderColor = '';
+  nome.style.borderColor = '';
+
+  if (nome.value == '') {
+    erro.textContent = 'Informe seu nome.';
+    erro.style.display = 'block';
+    nome.style.borderColor = '#e24b4a';
+    return;
+  }
 
   if (email.value == '') {
     erro.textContent = 'Informe seu e-mail.';
@@ -70,6 +80,7 @@ btn.addEventListener('click', function() {
   btn.textContent = '✓ Inscrito!';
   btn.style.background = '#3b6d11';
   btn.disabled = true;
+  localStorage.setItem('betaTesterName', nome.value);
   alert('Obrigado por se inscrever! Em breve você receberá novidades no seu e-mail.');
   setTimeout(function() {
     window.location.href = './../../index.html';

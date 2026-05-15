@@ -180,3 +180,17 @@ footer {
         width: 50px;
     }
 }
+
+
+.beta-tester-info{
+    display: none;
+
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+}
