@@ -67,16 +67,16 @@ function criarSlideshow(config) {
 // Pitch
 criarSlideshow({
     imagens: [
-        './../img/Pitch_Atom/slide1.jpg',
-        './../img/Pitch_Atom/slide2.jpg',
-        './../img/Pitch_Atom/slide3.jpg',
-        './../img/Pitch_Atom/slide4.jpg',
-        './../img/Pitch_Atom/slide5.jpg',
-        './../img/Pitch_Atom/slide6.jpg',
-        './../img/Pitch_Atom/slide7.jpg',
-        './../img/Pitch_Atom/slide8.jpg',
-        './../img/Pitch_Atom/slide9.jpg',
-        './../img/Pitch_Atom/slide10.jpg'
+        './../img/Pitch_ATOM/slide1.jpg',
+        './../img/Pitch_ATOM/slide2.jpg',
+        './../img/Pitch_ATOM/slide3.jpg',
+        './../img/Pitch_ATOM/slide4.jpg',
+        './../img/Pitch_ATOM/slide5.jpg',
+        './../img/Pitch_ATOM/slide6.jpg',
+        './../img/Pitch_ATOM/slide7.jpg',
+        './../img/Pitch_ATOM/slide8.jpg',
+        './../img/Pitch_ATOM/slide9.jpg',
+        './../img/Pitch_ATOM/slide10.jpg'
     ],
 
     imgId: 'slide-pitch',
